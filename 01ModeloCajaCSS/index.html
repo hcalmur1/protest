@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+	<meta charset="UTF-8" />
+	<title>Modelo de caja CSS</title>
+	<meta naem="description" content="En este ejercicio aprenderemos el modelo de caja de CSS">
+	<style>
+		article
+		{
+			background: #292623;
+			color: white;
+			height: 300px;
+			padding: 0 1em 2em 1.5em;
+			width: 80%;
+
+		}
+
+		aside
+		{
+			background: orange;
+			height: 150px;
+			margin: 0 1em 2em 1.5em;
+		}
+
+		body, html 
+		{
+			font-size: 16px;
+			text-align: center;
+		}
+
+		div
+		{
+			background: orange;
+			border: thick dotted black;
+			padding: 1em;
+		}
+
+		footer
+		{
+			background: skyblue;
+			height: 300px;
+			padding: 50px
+			;
+			width: 300px;
+		}
+		h1
+		{
+			background: sandybrown;
+			border: 1px solid black;
+			margin: 1em auto 2em;
+			padding: 1em 0 2em;
+			width: 90%;
+		}
+
+		section
+		{
+			background: skyblue;
+			border: thick dotted black;
+			margin: 0 1em; 
+			padding: 1em 0;
+			width: 50%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Modelo de Caja CSS</h1>
+	<div>Esto es una div</div>
+	<section>Esto es una section</section>
+	<article>
+		<aside>Esto es un aside dentro de un article</aside>
+		<aside>Esto es un aside dentro de un article</aside>
+	</article>
+	<footer>Esto es un footer</footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html><!-- DOCTYPE, es la versión del documento HTML -->
+<html lang="es"><!-- Especificar el idioma, incluso se puede declarar el país es-MX-->
+<head>
+	<!-- La codificación de caracteres (UTF-8), para que se muestren bien los caracteres ajenos al inglés-->
+	<meta charset="UTF-8" />
+	<!-- Asegura que Explorer funcione a su máxima capacidad y activa el Frame de Chrome
+	http://librosweb.es/css/capitulo_4/margen_relleno_bordes_y_modelo_de_cajas.html
+	 -->
+	<meta http-content="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- Título entre 60 y 70 caracteres -->
+	<title>Título del Documento</title>
+	<!-- Descripción entre 155 y 160 caracteres -->
+	<meta name="description" content="Breve descripción de lo que contendra el documento HTML">
+	<!-- Para que el contenido se adapte al tamaño de la pantalla del dispositivo-->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Para que en iOS una web parezca app-->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- default, black - black-traslucent-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-startup-image" href="img/apple-touch-icon.png" />
+	<!--
+	https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html
+	Tablets Retina Display 152X152
+	Smartphones Retina Display 120X120
+	Tablets 76X76
+	Smartphones 57X57
+	Desktop 16X16
+	http://convertico.com
+	-->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<!-- LA siguiente línea todavía no esta soportada, pero para un futuro, así va a ser -->
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+	<!-- Se puede manejar archivos de vectores con extensión .svg-->
+	<link rel="shortcut icon" type="image/svg+xml" href="img/html5-logo.svg" />
+	<!-- Por experiencia es mejor poner el de máximo tamaño en el size y así poner al final del nombre del archivo el tamaño -->
+	<link rel="apple-touch-icon" size="152x152" href="img/apple-touch-icon-152x152.png" />
+	<!-- <meta name="author" content="Horacio Calzada" />-->
+	<!-- http://humanstxt.org/ -->
+	<link type="text/plain" rel="author"  href="humans.txt" />
+	<!-- 
+	http://www.sitemaps.org
+	http://www.xml-sitemaps.com
+	-->
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+	<!-- 
+	http://www.robotstxt.org
+	http://deteresa.com/meta-robots
+	-->
+	<meta name="robots" content="index,follow" />
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<p>Conetido del Documento</p>
+	<img src="img/web-hero.jpg" alt="Web Hero!!" />
+	<!-- 
+		Los Script siempre abajo
+		http://browserdiet.com/es/
+	-->
+	<script src="js/codigos.js"></script>
+</body>
+</html>

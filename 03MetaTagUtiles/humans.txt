@@ -1,0 +1,19 @@
+/* Curso de diseño y programación en Bextlan con Jhonatan Mircha */
+
+/* TEAM */
+	Developer: Horacio Calzada Murguía
+	Contacto: hcalmur[at]gmail.com
+	Twitter: @hcalmur
+	From: Mexico, DF
+
+/* THANKS */
+	@w3c http://www.w3.org/
+
+/* SITE */
+	Last update: 2015/03/15
+	Language: Español
+	Standars: HTML5, CSS3
+	Components: Responsive Design, Google Fonts
+	Software: SublimeText3,Chrome
+
+/* http://humanstxt.org/ */

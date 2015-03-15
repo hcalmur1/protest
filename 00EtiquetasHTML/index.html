@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+	<!-- 
+	Etiquetas HTML
+		https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+	Disposición de los elementos HTML (display)
+	Hay 2 tipos de disposición por defecto
+	En línea: display:inline
+		El elemento sólo ocupa el espacio necesario a lo ancho.
+		Etiquetas en línea:
+			span, img, a, b, i, strong, mark, iframe, audio, video.
+	En bloque: display:block
+		El elemento ocupa todo el espacio a lo ancho, aunque no lo ocupe todo ( es envidioso). Etiquetas en bloque: 
+			div, h1 .. h6, p, header, nav, footer, section, article, hr, aside. 
+
+	 -->
+	<!--
+	Atajos del teclado en Sublimetext
+		http://falasco.org/sublime-text-2-cheat-sheet
+	Instalación Control Package y Emmet
+		http://sublime.wbond.net/installation
+	Aprender ZendCodig
+		http://code.google.com/p/zend-coding/
+	-->
+	<!--
+	Equivalencias de tamaños
+		http://pxtoem.com/
+	Tabla de Caracteres Unicode
+		http://unicode-table.com/es/#control-character
+		http://meyerweb.com/eric/css/colors
+		http://html-color-codes.info/color-names
+	Iconos
+		http://flaticon.com
+		http://iconmoon.io
+		http://fortawesome.github.io/Font-Awesome/
+	Fuentes
+		http://fontsquirrel.com
+		http://www.google.com/fonts/
+	HTML5
+		http://caniuse.com
+	-->
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<meta name="description" content="En este documento revisaremos algunas etiquetas básicas de HTML." />
+	<style>
+		a
+		{
+			color: sandybrown;
+			text-decoration:none;
+		}
+
+		a:hover 
+		{
+			color: rosybrown;
+			font-size: 200%;
+		}
+
+		div, h1, h3, h5
+		{ 
+		 	background: orange; 
+		 	/*display: block;*/
+		}
+		
+		iframe
+		{
+			height: 600px;
+			width: 80%;
+		}
+
+		ol
+		{
+			list-style: lower-greek;
+		}
+
+		span, h2, h4, img
+		 { 
+		 	background: skyblue;
+		 	/*display: inline;*/
+		 }
+
+		ul
+		 {
+		 	list-style-type: square;
+		 }
+
+		 #estaciones>li:first-child
+		 { 
+		 	background: #FF0000;
+		 }
+		 .listas>li 
+		 {
+		 	border-right: thin solid black;
+		 	display: inline;
+		 	padding: 0 1em;
+		 }
+
+		 .listas>li:last-child
+		 {
+		 	border: 0;
+		 }
+	</style>
+</head>
+<body>
+
+	<p>
+		&#10084;Contenido del documento, mi primer p&aacute;gina dise&ntilde;ada en HTML5&#10084;
+	</p> 
+	<img src="HTML5.png" alt="HTML5" title="Logo HTML" border="10" width="256" height="256" />
+	<div id="arriba">Esto es una DIV y arriba</div>
+	<span>Esto es una spam</span>
+	<!-- 
+		h${Encabezado de tipo $}*6 
+		Siempre debe de haber un solo h1 por página, esto es para que google lo tome como el título principal de la página, si se ponen más google se confunde. No abusar en el uso de las etiquetas de tipo h.
+	-->
+	<h1>Encabezado de tipo 1</h1>
+	<h2>Encabezado de tipo 2</h2>
+	<h3>Encabezado de tipo 3</h3>
+	<h4>Encabezado de tipo 4</h4>
+	<h5>Encabezado de tipo 5</h5>
+	<h6>Encabezado de tipo 6</h6>
+	<p>
+		Esto es un párrafo. Y éste texto está en <b>negritas</b>, <i>cursiva</i>, <u>subrayado</u>. <strong>Esta parte es importante</strong>, <mark>esta parte está resaltada</mark>, <em>esto tiene énfasis</em> y estas son <small>letras chiquitas, como en los contratos</small>.
+	</p> 
+	<p>
+		La fórmula del agua es H <sub>2</sub>O.
+		<br />
+		<hr />
+		<br />
+		La fórmula de la relatividad de Einstein es e = mc<sup>2</sup>.
+	</p>
+	<h2>Listas desordenadas (viñetas)</h2>
+	<ul id="estaciones" class="listas">
+		<li>Primavera</li>
+		<li>Verano </li>
+		<li>Otoño</li>
+		<li>Invierno</li>
+	</ul>
+	<h2>Listas ordenadas (numración) </h2> 
+	<ol class="listas">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JScript</li>
+		<li>AJAX</li>
+		<li>PHP</li>
+		<li>MySQL</li>
+	</ol>
+	<h2>Listas multinivel</h2>
+	<ul class="listas">
+		<li>
+			Frontend
+			<ol class="listas">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JS</li>
+			</ol>			
+		</li>
+		<li>
+			Backend
+			<ol class="listas">
+				<li>AJAX</li>
+				<li>PHP</li>
+				<li>MySQL</li>
+			</ol>
+		</li>
+	</ul>
+	<a href="http://www.google.com" target="_blank">Google</a>
+	<a href="http://w3.org/html/logo">
+		<img src="HTML5.png" alt="Logo HTML5" width="100" height="100" />
+	</a>
+	<a href="mailto:hcalmur@gmail.com">hcalmur@gmail.com</a>
+	<a href="#arriba">Pa' rriba</a>
+	<br /><br />
+	<iframe src="HTML5.pdf" width="200" height="200">
+		Tu navegador no soporta IFRAMEs
+	</iframe>
+	<iframe src="http://cursos.bextlan.com/web">
+		Tu navegador no soporta IFRAMEs
+	</iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/H7AyCy3BXYo" frameborder="0" allowfullscreen></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4487681633523!2d-99.15463000000003!3d19.436208999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8d24522071f%3A0x20fdc6dd3dcc0c20!2sMonumento+a+la+Revoluci%C3%B3n!5e0!3m2!1ses-419!2smx!4v1425600118168" width="400" height="300" frameborder="0" style="border:0"></iframe>
+	</body>
+</html>

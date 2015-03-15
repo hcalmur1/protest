@@ -1,0 +1,17 @@
+*, *:after, *:before
+{
+	border: 0;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: Helvetica, Arial;
+	font-size: 32px;
+	text-align: center;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Estructura Semántica de HTML5</title>
+	<meta name="description" content="En este ejercicio aprenderemos la estructura semantica de HTML5">
+	<!-- 	<link rel="stylesheet" href="css/normalize.css" />
+ 	-->
+ 	<link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+	<h1 class="titulo">Estructura semántica de HTML5</h1>
+	<header class="azul fila" >
+		&lt;header&gt;
+		<!-- header, define una cabecera para el contenido del documento, generalmente encontramos logos, formularios de acceso, navegaciones, encabezados, banners, etc. -->
+	</header>
+	<nav class="azul fila" >
+		&lt;nav&gt;
+		<!-- La etiqueta nav, nos defineun menú de navegación en el documento o el sitio, se puede tener varios nav, pero los navegadores consideran al primero que encuentran como el más importante -->
+	</nav>
+	<section id="contenedor" class="fila">
+		<!-- <main>
+			https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+			main, define el concepto proncipal del documento
+			</main>
+		-->
+		<section id="principal" class="azul">
+		<!--
+			<section>, me define un área o zona de contenido específico en el documento, por ejemplo, en una publicación la zona de comentarios es un section
+			</section>
+		-->
+		&lt;section&gt;
+			<article>
+				<!-- 
+					<article>, se define como un contenido independiente, por ejemplo en la zona de comentarios de una publicación, cada comentario es un article
+					</article>
+				-->
+				&lt;article&gt;		
+			</article>	
+		</section>
+		<aside class="azul">
+			<!-- 
+				<aside>, se define como un contenido secundario y/o sin relevancia que puede o no acompañar a un contenido principal, por ejemplo, la publicidad, la barra lateral de un blog, etc.
+				</aside>
+			-->	
+			&lt;aside&gt;
+		</aside>
+	</section> 
+	<footer class="azul fila" >
+		&lt;Footer&gt;
+	</footer>
+</body>
+</html>
