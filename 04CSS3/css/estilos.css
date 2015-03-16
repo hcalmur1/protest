@@ -1,0 +1,148 @@
+*
+{
+	border:0;
+	margin: 0;
+	padding: 0;
+}
+
+article
+{
+	margin: .25em auto;
+	width: 80%;
+}
+
+body, html
+{
+	/*
+	Siempre es recomendable dar estilos a las etiquetas <body> y <html>
+	*/
+	background: #1C5F81;
+	color: #EEE;
+	font-size: 32px;
+	text-align: center;
+}
+
+ul
+{
+	list-style-position: inside;
+	text-align: left;
+}
+
+/*http://lea.verou.me/humble-border-radius*/
+#bordes
+{
+	background: black;
+	border-radius: 1em;
+	border-radius: 1em 0;
+	border-radius: 1em .5em 0;
+	border-radius: 2em 2em .5em .5em;
+}
+
+#rgba
+{
+	/*background: #F60;*/
+	background: rgba(255,102,0,.5);
+}
+
+@font-face{
+	/* En esta nueva característica de @font-face el nombre que le se le asigne, no importa mientras las rutas a las fuentes sea correcta, es decir le puedes poner a font-family: <el nombre que quieras> y al momento de llamarla se le debe de poner el nombre que le pusiste en @font-face, lo más recomendable es respetar el nombre de la fuente para mayor claridad*/
+	/*font-family: "Peshcita";*/
+	font-family: "Pecita";
+	/* La línea de abajo es para navegadores IE nuevos*/
+	src: url("../fonts/Pecita.eot");
+	/* En la línea siguiente se agrega (#?iefix) después del nombre de la fuente, para que los navegadores IE viejos lo puedan interpretar o aceptar*/
+	src: url("../fonts/Pecita.eot#?iefix") format("embedded-opentype"),
+		 url("../fonts/Pecita.ttf") format("trutype"),
+		 url("../fonts/Pecita.svg#Pecita") format("svg"),
+		 url("../fonts/Pecita.woff") format("woff");
+		 /*woof = Web Open Font Format*/
+}
+
+#fuentes
+{
+	background: #F60;
+	font-family: "Pecita", sans-serif;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+#fuentes-google
+{
+	background: #000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#fuentes-unidades
+{
+
+	font-size: 64px;
+}
+
+#fuentes-unidades>p:first-child
+{
+	/*
+	De acuerdo a la explicación 1 em es equivalente al elemento padre en este caso son 64px, lo que quiere decir que si poneos 128px en este caso iguala el tamaño.
+	font-size: 128px;
+	*/
+	background: rgba(161,105,228,.5);
+	font-size: 2em;
+
+}
+
+#fuentes-unidades>p:last-child
+{
+	/* 
+	El rem se basa en el tamaño definido dentro del css en el selector html, en este caso al principio de este archivo el selector html tiene un valor de 32px, lo que equivale a decir que estamos poniendo aquí 32px, y no hace caso al elemento padre que lo ciontiene qyue en este caso es el <article id="fuentes-unidades"> con id fuentes-unidades
+	font-size: 32px;
+	*/
+	background: rgba(178,226,120,.5);
+	font-size: 1rem;
+}
+
+#sombras
+{
+	box-shadow: .1em .1em .5em rgba(0,0,0,.5) inset,
+	 .3em .3em .5em rgba(255,102,0,.7);
+	text-shadow: .3em .3em .25em rgba(0,0,0,.75),
+	.5em .3em .5em rgba(255,102,0,.7);
+}
+
+.gradientes
+{
+	height: 300px;
+}
+
+/*
+Gradientes
+https://developer.mozilla.org/es/docs/CSS/Using_CSS_gradients
+http://www.colorzilla.com/gradient-editor/;
+*/
+
+#glineal
+{
+	/*
+	Todo esto es generado a apartir de esta aplicación en la WEB
+	http://www.colorzilla.com/gradient-editor/;
+	*/
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(left,  #1e5799 0%, #207cca 48%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(48%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #1e5799 0%,#207cca 48%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #1e5799 0%,#207cca 48%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #1e5799 0%,#207cca 48%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to right,  #1e5799 0%,#207cca 48%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */	
+}
+
+#gradial
+{
+	background: #b3dced; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #b3dced 0%, #29b8e5 47%, #bce0ee 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b3dced), color-stop(47%,#29b8e5), color-stop(100%,#bce0ee)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #b3dced 0%,#29b8e5 47%,#bce0ee 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #b3dced 0%,#29b8e5 47%,#bce0ee 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #b3dced 0%,#29b8e5 47%,#bce0ee 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #b3dced 0%,#29b8e5 47%,#bce0ee 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
