@@ -146,3 +146,88 @@ background: radial-gradient(ellipse at center,  #b3dced 0%,#29b8e5 47%,#bce0ee 1
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
+
+#ajuste-texto
+{
+	background: #333;
+	margin: auto;
+	width: 100px;
+	word-wrap: break-word;
+}
+
+#texto-columnas
+{
+	/*Prefijos de los navegadores*/
+
+	-ms-column-count: 3;
+	-ms-column-gap: 1em;
+	-ms-column-rule: thick solid black;
+	-moz-column-count: 3;
+	-moz-column-gap: 1em;
+	-moz-column-rule: thick solid black;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 1em;
+	-webkit-column-rule: thick solid black;
+	column-count: 3;
+	column-gap: 1em;
+	column-rule: thick solid black;
+	background: rgba(255,102,0,.7);
+	font-size: .5em;
+}
+
+.tamanio-caja
+{
+	background: #999;
+	margin: .5em auto;
+	padding: 1em;
+	width: 50%;
+}
+
+.a-dieta
+{
+	box-sizing: border-box;
+}
+
+/* http://librosweb.es/css/capitulo_4/fondos.html */
+
+#fondos-multiples
+{
+	background: url("../img/arbol.png") no-repeat center bottom,
+				url("../img/aves.png") no-repeat center bottom,
+				url("../img/cielo.png") no-repeat center top;
+	background-color: skyblue;
+	color: #292623;
+	height: 700px;
+	width: 80%;
+}
+
+#fondo-area
+{
+	background: #292623;
+	background-clip: border-box;
+	background-clip: padding-box;
+	background-clip: content-box;
+	border: medium dashed #EC673A;
+	padding: 1em;
+}
+
+#fondo-origen
+{
+	background: #292623 url("../img/html5-3d.jpg") no-repeat;
+	border: medium dashed #EC673A;
+	background-clip: content-box;
+	background-origin: padding-box;
+	background-origin: border-box;
+	background-origin: content-box;
+	padding: 1em;
+}
+
+#fondo-tamanio
+{
+	background: #292623 url("../img/html5-3d.jpg") no-repeat bottom center;
+	background-size: 192px 108px;
+	background-size: 50% 20%;
+	background-size: 50% 50%;
+	background-size: contain;
+	background-size: cover;
+}
