@@ -298,6 +298,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', end
 	background: #999;
 	border-radius: .5em;
 	color: #000;
+	font-size: 2em;
 	-ms-transform: rotate(360deg);
 	-webkit- transform: rotate(360deg);
 	transform: rotate(360deg);
@@ -308,5 +309,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', end
 	/*
 		Esta es la mejor forma de realizar una transición usando clases y aplicandola a los selectores que queramos.
 	*/
+	-webkit-transition: all 2s ease-out;
 	transition: all 2s ease-out;
+}
+
+#tx-rotacion:hover
+{
+	-ms-transform: rotatex(360deg);
+	-webkit-transform: rotatex(360deg);
+	transform: rotatex(360deg);
+}
+
+#ty-rotacion:hover
+{
+	-ms-transform: rotatey(360deg);
+	-webkit-transform: rotatey(360deg);
+	transform: rotatey(360deg);
+}
+
+#tz-rotacion:hover
+{
+	-ms-transform: rotatez(360deg);
+	-webkit-transform: rotatez(360deg);
+	transform: rotatez(360deg);
+}
+
+#animaciones
+{
+	background: black;
+}
+
+#pacman
+{
+	border: 1.5em solid yellow;
+	border-right: 1.5em solid transparent;
+	border-radius: 1.5em;
+	height: 0;
+	/*http://www.librosweb.es/css/capitulo_5.html*/
+	position: absolute; /*static, relative, absolute, fixed, sticky*/
+	width: 0;
+}
+
+#ojo
+{
+	background: red;
+	border-radius: .5em;
+	height: .5em;
+	left: -.25em;
+	position: relative;
+	top: -1.25em;
+	width: .5em;
+}
+
+.animado
+{
+	/*
+	http://developers.mozilla.org/es/docs/Web/CSS/Usando_animaciones_CSS
+	http://daneden.me/animate/
+	http://www.justinaguilar.com/animations/index.html
+	Animación: nombre duración veces tipoAnim retardo aceleración;
+	Tipo Animación: normal alternate;
+	Tipo de aceleración: kinear, ease, ease-in, ease-out, ease-in-out;
+	 */
+	-webkit-animation: muevete 4s infinite normal 2s ease-out;
+	animation: muevete 4s infinite normal 2s ease-out;
+}
+
+@-webkit-keyframes muevete
+{
+	0%, 100%
+	{
+		left: 0%;
+	}
+
+	45%
+	{
+		left: 90%;
+		border-color: red;
+		border-right-color: transparent;
+		/*-webkit-transform: rotateY(0deg);*/
+	}
+
+	55%
+	{
+		left: 90;
+		-webkit-transform: rotateY(-180deg);
+	}
 }
