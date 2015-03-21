@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Fundamentos de Programación en Javascript parte 1</title>
+	<meta name="description" content="En este ejercicio entenderemos fundamentos de programación en Javascript" />
+	<style>
+		body, html
+		{
+			font-family: Helvetica,sans-serif;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Fundamentos en programación en Javascript parte 1</h1>
+	<p>
+		<a href="index.html">Regresar al inicio</a>
+	</p>
+	<h2>Definiendo un Perro</h2>
+	<script>
+		//Comentarios de una sola línea
+		/*
+		Comentario de varias
+		líneas de código
+		*/
+		//Definir perro
+		function Perro(n,r,e,s,a,f)
+		{
+			//This dentro de una función es el objeto que se define en la función
+			var o = this;
+
+			o.nombre = n;
+			o.raza = r;
+			o.edad = e;
+			//o.sexo = s;
+			o.adiestrado = a;
+			o.foto = f;
+			//o.comida = c;
+
+			//Asignación ( 1 igual = )
+			
+			//Compración ( 2 iguales == compara que los valores sean iguales)
+			//o.sexo = ( s == true )?"Macho":"Hembra";
+			
+			//Idéntico ( 3 iguales === compara que los valores y su tipo de dato sean iguales)
+			//o.sexo = ( s === true )?"Macho":"Hembra";
+			
+			// true = 1
+			// false = 0
+			// ! operador lógico de negación ejemplo:
+			// o.sexo = ( s )?"Macho":"Hembra";
+			// o.sexo = ( !s )?"Macho":"Hembra";
+			//Operador tenario
+			//variable = (condicion)?verdadero:falso
+			
+			o.sexo = ( s === true )?"Macho":"Hembra";
+			o.adiestrado = ( a === true )?"Adiestrado":"Balagardo";
+			//Para saber que tipo de datos tenemos
+			console.log(typeof s, typeof n, typeof e, typeof s, typeof a)
+
+			o.aparecer = function()
+			{
+				//alert("El objeto aparece");
+				var imagen = document.createElement("img");
+				imagen.src= o.foto;
+				imagen.alt= o.nombre;
+				imagen.title= o.nombre;
+
+				document.body.appendChild(imagen);
+			}
+
+			o.ladrar = function()
+			{
+				//alert("Guau !!! Guauu !!!");
+				var audio = document.createElement("audio");
+				audio.src = "activos/guau.mp3";
+				document.body.appendChild(audio);
+				return audio.play();
+
+			}
+
+			o.comer = function(c)
+			{
+				o.comida = c;
+
+				var alerta = alert(o.nombre+" comió "+o.comida);
+				return alerta;
+			}
+
+			o.mover = function()
+			{
+				alert("El objeto se ha movido");
+			}
+
+		}
+
+		function iniciar()
+		{
+			//alert("Ejecutando función iniciar");
+			var kenai = new Perro("Kenai","Criollo",2,true,true,"activos/kenai.jpg");
+
+			//alert(kenai);
+			document.write(kenai+"<br />"+window+"<br />"+document+"<br />"+navigator);
+
+			console.log(kenai,window,document,navigator);
+			document.write("<p>"+kenai.nombre+"</p>");
+			document.write("<p>"+kenai.raza+"</p>");
+			document.write("<p>"+kenai.edad+"</p>");
+			document.write("<p>"+kenai.sexo+"</p>");
+			document.write("<p>"+kenai.adiestrado+"</p>");
+
+			//document.write(kenai.comer);
+			
+			kenai.aparecer();
+			kenai.ladrar();
+			kenai.comer("Carne");
+			kenai.comer("croquetas");
+			kenai.mover();
+		}
+
+		iniciar();
+	</script>
+</body>
+</html>

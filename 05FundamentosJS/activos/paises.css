@@ -1,0 +1,23 @@
+#paises
+{
+	/* background: skyblue; */
+	margin: auto;
+	width: 90%;
+}
+
+.pais>div
+{
+	/* background: gray; */
+	display: inline-block;
+	margin: auto;
+	text-align: center;
+	vertical-align: top;
+	width: 30%;
+}
+
+.pais img
+{
+	display: block;
+	margin: 1em auto;
+	max-width: 100%;
+}
