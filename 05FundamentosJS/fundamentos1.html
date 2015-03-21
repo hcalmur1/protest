@@ -29,6 +29,7 @@
 		{
 			//This dentro de una función es el objeto que se define en la función
 			var o = this;
+			var imagen = document.createElement("img");
 
 			o.nombre = n;
 			o.raza = r;
@@ -62,7 +63,10 @@
 			o.aparecer = function()
 			{
 				//alert("El objeto aparece");
-				var imagen = document.createElement("img");
+				/*
+				Cuando en java script no se antepone la palabra reservada var entonces la variable se vuelve global y aplica en toda la clase
+				*/
+				//var imagen = document.createElement("img");
 				imagen.src= o.foto;
 				imagen.alt= o.nombre;
 				imagen.title= o.nombre;
@@ -75,7 +79,8 @@
 				//alert("Guau !!! Guauu !!!");
 				var audio = document.createElement("audio");
 				audio.src = "activos/guau.mp3";
-				document.body.appendChild(audio);
+				//audio.controls = true;
+				//document.body.appendChild(audio);
 				return audio.play();
 
 			}
@@ -90,7 +95,10 @@
 
 			o.mover = function()
 			{
-				alert("El objeto se ha movido");
+				//alert("El objeto se ha movido");
+				imagen.style.position = "relative";
+				imagen.style.left = "10em";
+				imagen.style.borderRadius = "100%";
 			}
 
 		}
