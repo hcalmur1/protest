@@ -5,8 +5,11 @@ SEGUIR ESTA REGLA: PRIMERO DECLARACIÓN DEVARAIBLES, LUEGO DECLARACIÓN DE FUNCI
 //DECLARACIÓN DE VARIABLES
 var boton = document.getElementById("boton");
 var boton2 = document.getElementById("boton2");
-
 var numero = document.getElementById("numero");
+var hola = document.getElementById("hola");
+var fecha = new Date();
+var hora = fecha.getHours();
+
 
 //DECLARACIÓN DE FUNCIONES
 //Esta es una manera de hacer las funciones pero también se puede asignar en los eventos, es decir se copia tal cuál a la función como anónima
@@ -55,6 +58,50 @@ function parImpar()
 	}
 }
 
+function saluda()
+{
+    //alert(fecha);
+    //alert(hora);
+    
+    /*
+    Algortimo para saludar:
+    	1)El Día tiene 24 horas que van del 0 a las 23 horas
+    	2)Decimos Deja dormir de las 0 a las 5
+    	3)Decimos Buenos días de las 6 a las 11
+    	4)Decimos Buenas tardes de 12 a las 18
+    	5)Decimos Buenas noches de 19 a las 23
+    */
+   
+   var hojaCSS = document.createElement("link");
+   hojaCSS.rel = "stylesheet";
+
+   //if(hora <= 5)
+    if(hora < 6)
+    {
+    	alert("Deja dormir!!!");
+    	hojaCSS.href = "activos/duermete.css";
+    }
+    //else if(hora > 5 && hora < 12
+    else if( hora >= 6 && hora <= 11 )
+    {
+    	alert("Buenos días");
+    	hojaCSS.href = "activos/dia.css";
+    }
+    //else if(hora > 11 && hora < 17)
+    else if (hora >=12 && hora <= 18)
+    {
+    	alert("Buenas tardes");
+    	hojaCSS.href = "activos/tarde.css";
+    }
+    else
+    {
+    	alert("Buenas noches");
+    	hojaCSS.href = "activos/noche.css";
+    }
+    
+    document.head.appendChild(hojaCSS);
+}
+
 //ASIGNACIÓN DE EVENTOS
 //Los manejadores de eventos semánticos se ejecutan a la carga del documento
 //Función anónima > window.onload = function() {};
@@ -66,4 +113,7 @@ window.onload = function() {
 	boton2.addEventListener("click", eventoClick);
 
 	numero.addEventListener("click", parImpar);
+    
+    hola.addEventListener("click",saluda);
+    
 }
