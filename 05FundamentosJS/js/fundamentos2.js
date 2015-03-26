@@ -11,6 +11,12 @@ var fecha = new Date();
 var hora = fecha.getHours();
 var dia = fecha.getDay();
 
+var btnReloj = document.getElementById("reloj");
+var detenerReloj = document.getElementById("detener-reloj");
+var muestroHora = document.getElementById("muestro-hora");
+
+var btnAlarma = document.getElementById("alarma");
+var detenerAlarma = document.getElementById("detener-alarma");
 
 //DECLARACIÓN DE FUNCIONES
 //Esta es una manera de hacer las funciones pero también se puede asignar en los eventos, es decir se copia tal cuál a la función como anónima
@@ -153,6 +159,37 @@ function anioBisiesto()
 	}
 }
 
+function reloj()
+{
+	var fechaReloj = new Date();
+	var hrReloj = fechaReloj.getHours();
+	var minReloj = fechaReloj.getMinutes();
+	var segReloj = fechaReloj.getSeconds();
+
+	if( hrReloj <= 9 )
+	{
+		hrReloj = "0" + hrReloj;
+	}
+
+	if( minReloj <= 9 )
+	{
+		minReloj = "0" + minReloj;
+	}
+
+	if( segReloj <= 9 )
+	{
+		segReloj = "0" + segReloj;
+	}
+
+	muestroHora.innerHTML = "<h1>"+hrReloj+":"+minReloj+":"+segReloj+"</h1>";
+}
+
+function alarma()
+{
+	var audio = document.createElement("audio");
+	audio.src = "activos/alarma.mp3";
+	return audio.play();
+}
 //ASIGNACIÓN DE EVENTOS
 //Los manejadores de eventos semánticos se ejecutan a la carga del documento
 //Función anónima > window.onload = function() {};
@@ -165,9 +202,25 @@ window.onload = function() {
 	boton2.addEventListener("click", eventoClick);
 
 	numero.addEventListener("click", parImpar);
-    
+
     hola.addEventListener("click",saluda);
 
     bisiesto.addEventListener("click", anioBisiesto);
 
+    btnReloj.addEventListener("click",function(){
+		//setInterval(reloj,1000);
+    	iniciarReloj = setInterval(reloj,1000);
+    });
+
+    detenerReloj.addEventListener("click",function(){
+    	clearInterval(iniciarReloj);
+    });
+
+    btnAlarma.addEventListener("click", function(){
+    	iniciarAlarma = setTimeout(alarma, 3000);
+    });
+
+    detenerAlarma.addEventListener("click", function(){
+    	clearTimeout(iniciarAlarma);
+    });
 }
