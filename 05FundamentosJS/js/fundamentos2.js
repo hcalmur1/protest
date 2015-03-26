@@ -9,6 +9,7 @@ var numero = document.getElementById("numero");
 var hola = document.getElementById("hola");
 var fecha = new Date();
 var hora = fecha.getHours();
+var dia = fecha.getDay();
 
 
 //DECLARACIÓN DE FUNCIONES
@@ -100,6 +101,56 @@ function saluda()
     }
     
     document.head.appendChild(hojaCSS);
+    //alert(dia)
+    /*
+    DLMMiJVS
+    0123 456
+     */
+
+    switch(dia)
+    {
+    case 0:
+    	alert("Es domingo");
+    	break;
+    
+    case 5:
+    	alert("Po fin es viernesss!!!!!");
+    	break;
+    
+    case 6:
+    	alert("Es sábado");
+    	break;
+    
+    default:
+    	alert("Estoy a la espera del fin de semana");
+    	break;
+	
+	}
+}
+
+function anioBisiesto()
+{
+	var anio = prompt("Ingresa un año");
+	if(isNaN(anio))
+	{
+		alert("No me engañes no es un año");
+	}
+	else
+	{
+		/*
+		1)EL año debe ser divisible entre 4, por ejemplo 2004, 2008
+		2)Pero si el año es divisible entre 4 y 100, entonces no es bisiesto, por ejemplo 2100, 2200
+		3)Pero si el año es divisible entre 100 y 400, entonces si es biciesto, por ejemplo 2000, 2400
+		 */
+		if( (anio%4 == 0 && anio%100 != 0) || anio%400 == 0)
+		{
+			alert("El año "+anio+" es bisiesto");
+		}
+		else
+		{
+			alert("El año "+anio+" no es bisiesto");
+		}
+	}
 }
 
 //ASIGNACIÓN DE EVENTOS
@@ -107,6 +158,7 @@ function saluda()
 //Función anónima > window.onload = function() {};
 //Función ya declarada > window.onload = eventoClick;
 window.onload = function() {
+
 	boton.onclick = eventoClick;
 	boton.onclick = otroEventoClick;
 
@@ -115,5 +167,7 @@ window.onload = function() {
 	numero.addEventListener("click", parImpar);
     
     hola.addEventListener("click",saluda);
-    
+
+    bisiesto.addEventListener("click", anioBisiesto);
+
 }
