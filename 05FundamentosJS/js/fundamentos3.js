@@ -42,6 +42,7 @@ function gato(evento)
 	//alert("Funciona");
 	//alert(evento.target.id);
 	var celda = evento.target;
+	celda.removeEventListener("click", gato);
 	//alert(celda);
 	var idCelda = evento.target.id;
 	//alert(idCelda); idCelda es una cadena
@@ -79,11 +80,10 @@ function gato(evento)
 		alert("Empate");
 		/*
 		Para recagar la página es con la instrucción
-			windows.location.reload();
+			window.location.reload();
 		*/
-		windows.location.reload();
 		console.log(window.location);
-		window.locate.reload();
+		window.location.reload();
 
 	}
 	else
