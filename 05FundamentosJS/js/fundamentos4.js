@@ -3,9 +3,9 @@
 var paises = new Array();
 paises[0] = Array(
 	"México",
-	"u-mex.png",
-	"b-mex.png",
-	"e-mex.png",
+	"u-mx.png",
+	"b-mx.png",
+	"e-mx.png",
 	"Estados Unidos Mexicanos",
 	"República Federal Presidencial",
 	"Ciudad de México, D.F",
