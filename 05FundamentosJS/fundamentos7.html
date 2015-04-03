@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Fundamentos de Programación parte 7</title>
+	<meta name="description" content="En este ejercicio seguiremos entendiendo fundamentos de programación en JavaScript" />
+	<style>
+		body, html
+		{
+			font-family: Helvetica, sans-serif;
+			font-size: 16px;
+		}
+		#barra
+		{
+			background: navy;
+			height: 50px;			
+			margin-top: 1em;
+			width: 125%;
+		}
+
+		#caja
+		{
+			background: black;
+			height: 200px;
+			position: relative;
+			width: 200px;
+		}
+
+		#subir
+		{
+			bottom:0;
+			font-size: 3em;
+			opacity: 0;
+			position: fixed;
+			right:0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Fundamentos de programación en JavaScript parte 7</h1>
+	<p>
+		<a href="index.html">Regresar al inicio</a>
+	</p>
+	<h2>Detección del teclaso y ratón</h2>
+	<div id="teclado">
+		<p id="down"></p>
+		<p id="press"></p>
+		<p id="up"></p>
+	</div>
+	<div id="raton">
+		<p id="pagina"></p>
+		<p id="pantalla"></p>
+	</div>
+	<div id="caja"></div>
+	<h2>Detección del Scroll</h2>
+	<div id="barra"></div>
+	<button id="subir">&#8679</button>
+	<div id="mapa"></div>
+
+	<script src="js/fundamentos7.js"></script>
+</body>
+</html>
