@@ -38,14 +38,13 @@ function conexionMySQL()
 			http://php.net/manual/es/function.sprintf.php
 		*/
 
-		$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
-		printf($formato,$conexion->host_info);
+		//$formato = "<div class='mensaje'>Conexión exitosa: <b>%s</b></div>";
+		//printf($formato,$conexion->host_info);
 	}
-
-	//$conexion->query("SET CHARACTER SET UTF8");
+	//Para que todo lo que traiga de la base de datos lo convierta a la codificación UTF8
+	$conexion->query("SET CHARACTER SET UTF8");
 
 	return $conexion;
 }
-
-conexionMySQL();
+//conexionMySQL();
 ?>
