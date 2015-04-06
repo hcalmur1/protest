@@ -4,6 +4,9 @@ require_once "conexion.php";
 function catalogoEditoriales($id_editorial)
 {
 	//echo "funciona";
+	/*
+		Lo recomendable es obtener los datos pasarlos a un arreglo cerrar la conexión y despues igualar los datos para traer el nombre
+	*/
 	$editoriales = Array();
 
 	$mysql = conexionMySQL();
@@ -18,12 +21,14 @@ function catalogoEditoriales($id_editorial)
 		$resultado->free();
 	}
 	$mysql->close();
-	print_r($editoriales);
+	//print_r para ver el contenido de un arreglo
+	//print_r($editoriales);
+	return $editoriales;
 }
 
-catalogoEditoriales();
+//catalogoEditoriales();
 /*
-	Pasoso para conectarme a MySQL con PHP
+	Pasos para conectarme a MySQL con PHP
 	1)Objeto de conexión: $mysql = conexionMySQL();
 	2)Consulta SQL: $sql = "SELECT * FROM heroes ORDER BY id_heroe DESC";
 	3)Ejecutar la consulta: $resultado = $mysql->query($sql);
@@ -31,6 +36,8 @@ catalogoEditoriales();
 */
 function mostrarHeroes()
 {
+	$editorial = catalogoEditoriales();
+
 	$mysql = conexionMySQL();
 	$sql = "SELECT * FROM heroes ORDER BY id_heroe DESC";
 
@@ -64,7 +71,7 @@ function mostrarHeroes()
 					$tabla .= "<td><h2>".$fila['nombre']."</h2></td>";
 					$tabla .= "<td><img src='img/".$fila['imagen']."' /></td>";
 					$tabla .= "<td><p>".$fila['descripcion']."</p></td>";
-					$tabla .= "<td><h3>".$fila['editorial']."</h3></td>";
+					$tabla .= "<td><h3>".$editorial[$fila['editorial']]."</h3></td>";
 					$tabla .= "<td>Botón editar</td>";
 					$tabla .= "<td>Botón eliminar</td>";
 				$tabla .= "<tr>";
