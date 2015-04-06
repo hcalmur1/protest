@@ -1,5 +1,27 @@
-<?php 
+<?php
 require_once "conexion.php";
+
+function catalogoEditoriales($id_editorial)
+{
+	//echo "funciona";
+	$editoriales = Array();
+
+	$mysql = conexionMySQL();
+	$sql = "SELECT * FROM editorial";
+
+	if($resultado = $mysql->query($sql))
+	{
+		while($fila = $resultado->fetch_assoc())
+		{
+			$editoriales[$fila["id_editorial"]] = $fila["editorial"];
+		}
+		$resultado->free();
+	}
+	$mysql->close();
+	print_r($editoriales);
+}
+
+catalogoEditoriales();
 /*
 	Pasoso para conectarme a MySQL con PHP
 	1)Objeto de conexión: $mysql = conexionMySQL();

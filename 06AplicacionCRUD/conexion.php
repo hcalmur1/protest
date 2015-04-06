@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 	include("config.php");*//*Si se usa la funcion include manda warnign perio sigue el flujo del programa
 	include_once funcion carga solo una vez
@@ -18,14 +18,14 @@ function conexionMySQL()
 	if($conexion->connect_error)
 	{
 		/*$error = "<div class='error'>";
-		
+
 			$error .= "Error de Conexión Número:<b>".$conexion->connect_errno."</b> Mensaje del error <mark>".$conexion->connect_error."</mark>";
 			$error .= "</div>";
-		*/		
+		*/
 		$error = "<div class='error'>Error de Conexión Número:<b>%d</b> Mensaje del error <mark>%s</mark></div>";
-		
+
 		printf($error,$conexion->connect_errno,$conexion->connect_error);
-		
+
 		die();
 	}
 	else
