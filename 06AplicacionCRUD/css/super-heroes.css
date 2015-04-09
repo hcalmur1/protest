@@ -20,10 +20,30 @@ img
 	width: 15%;
 }
 
+#cabecera, #contenido, #precarga, #respuesta, .tabla td, .tabla th
+{
+	padding: 1em;
+}
+
 #contenido
 {
 	background: white;
 	width: 80%;
+}
+
+#insertar
+{
+	color: #292623;
+	font-size: 1.5em;
+}
+
+#insertar:hover
+{
+	color: #EC673A;
+}
+#precarga, #respuesta
+{
+	display: none;
 }
 
 .error, .exito
@@ -38,13 +58,61 @@ img
 	background: #05C858;
 }
 
-#insertar
+.formulario, .tabla p
 {
-	color: #292623;
-	font-size: 1.5em;
+	text-align: left;
 }
 
-#insertar:hover
+.formulario div
 {
-	color: #EC673A;
+	margin: 1em auto;
+}
+
+.formulario legend
+{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.tabla
+{
+	margin: auto;
+	width: 90%;
+}
+
+.tabla a
+{
+	color: #EEEEEE;
+}
+
+.tabla a:hover
+{
+	color: #292623;
+}
+
+.tabla img
+{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.tabla td
+{
+	vertical-align: top;
+}
+
+.tabla th
+{
+	background: #292623;
+	color: #EEEEEE;
+}
+
+.tabla tr:nth-child(odd)
+{
+	background: #EC673A;
+}
+
+.tabla tr:nth-child(even)
+{
+	background: #1C5F81;
 }
