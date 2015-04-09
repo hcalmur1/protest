@@ -20,6 +20,7 @@ function ejecutarTransaccion($transaccion)
 	if($transaccion == "alta")
 	{
 		//Mostrar el formulario de alta
+		altaHeroe();
 	}
 	else if($transaccion == "insertar")
 	{

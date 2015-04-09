@@ -1,5 +1,39 @@
 <?php
 require_once "conexion.php";
+/*
+	Los ID nos sirven del lado de javascript para trabnajar con ellos
+	Los name nos sirven para identificarlos del lado del servidor con PHP en este caso
+ */
+function altaHeroe()
+{
+	$form = "<form id='alta-heroe' class='formulario' data-insertar>";
+		$form .= "<fieldset>";
+			$form .= "<legend>Alta de Super Héroe: </legend>";
+			$form .= "<div>";
+				$form .= "<label for='nombre'>Nombre:</label>";
+				$form .= "<input type='text' id='nombre' name='nombre_txt' required />";
+			$form .= "</div>";
+			$form .= "<div>";
+				$form .= "<label for='imagen'>Imagen:</label>";
+				$form .= "<input type='text' id='imagen' name='imagen_txt' required />";
+			$form .= "</div>";
+			$form .= "<div>";
+				$form .= "<label for='descripcion'>Descripcion:</label>";
+				$form .= "<textarea type='text' id='descripcion' name='descripcion_txa' required</textarea>";
+			$form .= "</div>";
+			$form .= "<div>";
+				$form .= "<label for='editorial'>Editorial:</label>";
+				//$form .= listaEditorial();
+			$form .= "</div>";
+			$form .= "<div>";
+				$form .= "<input type='submit' id='insertar' name='insertar_btn' value='Insertar' />";
+				$form .= "<input type='hidden' id='transaccion' name='transaccion' value='insertar' />";
+			$form .= "</div>";
+		$form .= "</fieldset>";
+	$form .= "</form>";
+
+	return printf($form);
+}
 
 function catalogoEditoriales($id_editorial)
 {
