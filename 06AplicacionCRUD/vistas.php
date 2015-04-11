@@ -1,8 +1,38 @@
 <?php
 require_once "conexion.php";
+
+function listaEditorial()
+{
+	//Esta función generará el select de las editoriales
+	//echo "#Insertar";
+	$mysql = conexionMySQL();
+	$sql = "SELECT * FROM editorial";
+
+	$resultado = $mysql->query($sql);
+
+	$lista = "<select id='editorial' name='editorial_slc' required>";
+	$lista .= "<option value=''>------</option>";
+		while($fila = $resultado->fetch_assoc())
+		{
+			//$lista .= "<option value='".$fila["id_editorial"]."'>".$fila["editorial"]."</option>";
+			//la funcion php sprintf convierte o guarda los datos en cadena de texto
+			$lista .= sprintf(
+				"<option value='%d'>%s</option>",
+				$fila["id_editorial"],
+				$fila["editorial"]
+			);
+		}
+	$lista .= "</select>";
+
+	$resultado->free();
+	$mysql->close();
+
+	return $lista;
+}
+
 /*
-	Los ID nos sirven del lado de javascript para trabnajar con ellos
-	Los name nos sirven para identificarlos del lado del servidor con PHP en este caso
+	Los ID nos sirven del lado de javascript para trabajar con ellos
+	Los names nos sirven para identificarlos del lado del servidor con PHP en este caso
  */
 function altaHeroe()
 {
@@ -19,14 +49,14 @@ function altaHeroe()
 			$form .= "</div>";
 			$form .= "<div>";
 				$form .= "<label for='descripcion'>Descripcion:</label>";
-				$form .= "<textarea type='text' id='descripcion' name='descripcion_txa' required</textarea>";
+				$form .= "<textarea id='descripcion' name='descripcion_txa' required></textarea>";
 			$form .= "</div>";
 			$form .= "<div>";
 				$form .= "<label for='editorial'>Editorial:</label>";
-				//$form .= listaEditorial();
+				$form .= listaEditorial();
 			$form .= "</div>";
 			$form .= "<div>";
-				$form .= "<input type='submit' id='insertar' name='insertar_btn' value='Insertar' />";
+				$form .= "<input type='submit' id='insertar-btn' name='insertar_btn' value='Insertar' />";
 				$form .= "<input type='hidden' id='transaccion' name='transaccion' value='insertar' />";
 			$form .= "</div>";
 		$form .= "</fieldset>";
@@ -35,7 +65,7 @@ function altaHeroe()
 	return printf($form);
 }
 
-function catalogoEditoriales($id_editorial)
+function catalogoEditoriales()
 {
 	//echo "funciona";
 	/*

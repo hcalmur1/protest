@@ -38,14 +38,26 @@ function enviarDatos()
 	{
 		if(ajax.status == OK)
 		{
-			console.log(ajax);
-			alert("Yes");
+			//alert("Yes");
+			//alert(ajax.responseText);
+			precarga.innerHTML = null;
+			precarga.style.display = "none";
+			respuesta.style.display = "block";
+			respuesta.innerHTML = ajax.responseText;
+			/*indexOf se usa para buscr texto dentro de una cadena de texto, cuando no encuientra el dato el valor es igual a -1*/
+			if(ajax.responseText.indexOf("data-insertar")>-1)
+			{
+				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe);
+			}
+
 		}
 		else
 		{
-			console.log(ajax);
-			alert("No");
+			//alert("No");
+			alert("El servidor no contestó\nError: "+ajax.status+": "+ajax.statusText);
 		}
+		console.log(ajax);
+
 	}
 }
 
@@ -71,6 +83,15 @@ function ejecutarAjax(datos)
 	//Envío los datos
 	ajax.send(datos);
 
+}
+
+function insertarHeroe(evento)
+{
+	alert("procesa formulario");
+	evento.preventDefault();
+	//var datos = "transaccion=insertar&nombre_txt=Nombre del Super héroe&imagen_txt=ruta/del/la/Imagen.png&descripcion_txa=blablabla&editorial_slc=1";
+	var datos = "transaccion=insertar";
+	ejecutarAjax(datos);
 }
 
 function altaHeroe(evento)

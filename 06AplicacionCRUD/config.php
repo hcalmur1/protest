@@ -3,7 +3,7 @@
 define("SERVER", "localhost");
 define("USER", "root");
 //define("PASS", "root"); En casa
-define("PASS", "2506IkerHcm");
+define("PASS", "root");
 define("BD", "super_heroes");
 
 ?>

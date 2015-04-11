@@ -25,6 +25,7 @@ function ejecutarTransaccion($transaccion)
 	else if($transaccion == "insertar")
 	{
 		//procesar los datos del formualrio de alta e insertarlos en MySQL
+		echo "Aquí obtendríamos los datos del formulario y se insertaría a la BD";
 	}
 	else if($transaccion == "elimiar")
 	{
