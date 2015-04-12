@@ -25,7 +25,13 @@ function ejecutarTransaccion($transaccion)
 	else if($transaccion == "insertar")
 	{
 		//procesar los datos del formualrio de alta e insertarlos en MySQL
-		echo "Aquí obtendríamos los datos del formulario y se insertaría a la BD";
+		insertarHeroe(
+			$_POST["nombre_txt"],
+			$_POST["imagen_txt"],
+			$_POST["descripcion_txa"],
+			$_POST["editorial_slc"]
+		);
+		
 	}
 	else if($transaccion == "elimiar")
 	{

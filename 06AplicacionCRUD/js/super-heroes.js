@@ -50,13 +50,19 @@ function enviarDatos()
 				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe);
 			}
 
+			//Esta decisión se va a utilizar, para que recarge los datos insertados después de 2 segundo.
+			if(ajax.responseText.indexOf("data-recargar")>-1)
+			{
+				setTimeout(window.location.reload(),2000);
+			}
+
 		}
 		else
 		{
 			//alert("No");
-			alert("El servidor no contestó\nError: "+ajax.status+": "+ajax.statusText);
+			alert("El servidor no contestó\nError: "+ajax.status+" : "+ajax.statusText);
 		}
-		console.log(ajax);
+		//console.log(ajax);
 
 	}
 }
@@ -87,10 +93,31 @@ function ejecutarAjax(datos)
 
 function insertarHeroe(evento)
 {
-	alert("procesa formulario");
 	evento.preventDefault();
-	//var datos = "transaccion=insertar&nombre_txt=Nombre del Super héroe&imagen_txt=ruta/del/la/Imagen.png&descripcion_txa=blablabla&editorial_slc=1";
-	var datos = "transaccion=insertar";
+	//alert("procesa formulario");
+	//console.log(evento);
+	//console.log(evento.target);
+	//target[0] Este muestra los elementos dentro del target
+	//console.log(evento.target[0]);
+	//console.log(evento.target.length);
+
+	var nombre = new Array(),
+		valor = new Array(),
+		hijosForm = evento.target,
+		datos = "";
+
+	for(var i=1; i<hijosForm.length ; i++)
+	{
+		nombre[i] = hijosForm[i].name;
+		valor[i] = hijosForm[i].value;
+
+		datos += nombre[i]+"="+valor[i]+"&";
+	}
+	console.log(datos);
+	/*
+		La instrucción for va a armar una cadena como la siguiente:
+		var datos = "transaccion=insertar&nombre_txt=Nombre del Super héroe&imagen_txt=ruta/del/la/Imagen.png&descripcion_txa=blablabla&editorial_slc=1";
+	*/
 	ejecutarAjax(datos);
 }
 
