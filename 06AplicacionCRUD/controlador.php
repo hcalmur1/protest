@@ -2,19 +2,18 @@
 require "vistas.php";
 require "modelo.php";
 /*
-Aplicación CreateReadUpdateDelete
-PHP tiene 2 métodos de envío de datos: POST y GET
+	Aplicación CreateReadUpdateDelete
+	PHP tiene 2 métodos de envío de datos: POST y GET
 
-Create  Afecta BD     INSERT (SQL) POST          Modelo
-Read    No afecta BD  SELECT (SQL) GET y/o POST  Vista
-Update  Afecta BD     UPDATE (SQL) POST          Modelo
-Delete  Afecta BD     DELETE (SQL) POST          Modelo
-
+	Create  Afecta BD     INSERT (SQL) POST          Modelo
+	Read    No afecta BD  SELECT (SQL) GET y/o POST  Vista
+	Update  Afecta BD     UPDATE (SQL) POST          Modelo
+	Delete  Afecta BD     DELETE (SQL) POST          Modelo
  */
-
 $transaccion = $_POST["transaccion"];
-//echo  $transaccio. " recuerden que AJAX se ejecuta en el servidor por lo que no se necesita actualizar la página web "
-
+/*
+	echo  $transaccion. " recuerden que AJAX se ejecuta en el servidor por lo que no se necesita actualizar la página web ";
+ */
 function ejecutarTransaccion($transaccion)
 {
 	if($transaccion == "alta")
@@ -25,17 +24,12 @@ function ejecutarTransaccion($transaccion)
 	else if($transaccion == "insertar")
 	{
 		//procesar los datos del formualrio de alta e insertarlos en MySQL
-		insertarHeroe(
-			$_POST["nombre_txt"],
-			$_POST["imagen_txt"],
-			$_POST["descripcion_txa"],
-			$_POST["editorial_slc"]
-		);
-		
+		insertarHeroe($_POST["nombre_txt"],$_POST["imagen_txt"],$_POST["descripcion_txa"],$_POST["editorial_slc"]);
 	}
-	else if($transaccion == "elimiar")
+	else if($transaccion == "eliminar")
 	{
 		//Eliminar de MySQL el registro solicitado
+		eliminarHeroe($_POST["idHeroe"]);
 	}
 	else if($transaccion == "editar")
 	{
@@ -45,7 +39,6 @@ function ejecutarTransaccion($transaccion)
 	{
 		//modificar en MySQL los datos del regostro modificado
 	}
-
 }
 
 ejecutarTransaccion($transaccion);

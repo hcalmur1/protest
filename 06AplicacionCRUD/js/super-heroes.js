@@ -1,13 +1,13 @@
 //Constantes
-var READY_STATE_CHANGE = 4
+var READY_STATE_CHANGE = 4,
 	OK = 200;
 
 //Variables y Objetos
-var ajax = null,
-	btnInsertar = document.querySelector("#insertar"),
-	precarga = document.querySelector("#precarga"),
-	respuesta = document.querySelector("#respuesta");
-
+var ajax = null;
+var	btnInsertar = document.querySelector("#insertar");
+var btnsEliminar = document.querySelectorAll(".eliminar");
+var	precarga = document.querySelector("#precarga");
+var	respuesta = document.querySelector("#respuesta");
 
 //Funciones
 /*
@@ -44,18 +44,16 @@ function enviarDatos()
 			precarga.style.display = "none";
 			respuesta.style.display = "block";
 			respuesta.innerHTML = ajax.responseText;
-			/*indexOf se usa para buscr texto dentro de una cadena de texto, cuando no encuientra el dato el valor es igual a -1*/
+			/*indexOf se usa para buscar texto dentro de una cadena de texto, cuando no encuientra el dato el valor es igual a -1*/
 			if(ajax.responseText.indexOf("data-insertar")>-1)
 			{
 				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe);
 			}
-
-			//Esta decisión se va a utilizar, para que recarge los datos insertados después de 2 segundo.
+			//Esta decisión se va a utilizar, para que recarge los datos después de 2 segundo.
 			if(ajax.responseText.indexOf("data-recargar")>-1)
 			{
-				setTimeout(window.location.reload(),2000);
+				setTimeout(window.location.reload(),3000);
 			}
-
 		}
 		else
 		{
@@ -63,7 +61,6 @@ function enviarDatos()
 			alert("El servidor no contestó\nError: "+ajax.status+" : "+ajax.statusText);
 		}
 		//console.log(ajax);
-
 	}
 }
 
@@ -75,32 +72,31 @@ function ejecutarAjax(datos)
 	ajax.onreadystatechange=enviarDatos;
 	/*
 		Un vez detectados los cambios se indica por que medio se enviará la información al servidor, en este caso POST y el archivo en BAckEnd que va a realizar el proceso
-	*/
+	 */
 	ajax.open("POST","controlador.php");
 	/*
 		http://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#MIME-version
 		http://sites.utoronto.ca/webdocs/HTMLdocs/Book/Book-3ed/appb/mimetype.html
-
 	 */
 	/*
 		Configuración de la cabecera, en este caso se va a usar un formulario, por eso se usa este tipo de contenido
-	*/
+	 */
 	ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	//Envío los datos
 	ajax.send(datos);
-
 }
 
 function insertarHeroe(evento)
 {
 	evento.preventDefault();
-	//alert("procesa formulario");
-	//console.log(evento);
-	//console.log(evento.target);
-	//target[0] Este muestra los elementos dentro del target
-	//console.log(evento.target[0]);
-	//console.log(evento.target.length);
-
+	/*
+		alert("procesa formulario");
+		console.log(evento);
+		console.log(evento.target);
+		target[0] Este muestra los elementos dentro del target
+		console.log(evento.target[0]);
+		console.log(evento.target.length);
+	*/
 	var nombre = new Array(),
 		valor = new Array(),
 		hijosForm = evento.target,
@@ -110,7 +106,6 @@ function insertarHeroe(evento)
 	{
 		nombre[i] = hijosForm[i].name;
 		valor[i] = hijosForm[i].value;
-
 		datos += nombre[i]+"="+valor[i]+"&";
 	}
 	console.log(datos);
@@ -129,9 +124,31 @@ function altaHeroe(evento)
 	ejecutarAjax(datos);
 }
 
+function eliminarHeroe(evento)
+{
+	evento.preventDefault();
+	/*
+		los atributos que el usuario inventa en este caso data-id se obtiene del evento con la propiedad dataset
+		//alert("Eliminado"+evento.target.dataset.id);
+	 */
+	var idHeroe = evento.target.dataset.id;
+	var eliminar = confirm("¿Estás seguro de eliminar el Super Héroe con el id: "+idHeroe);
+	
+	if(eliminar)
+	{
+		var datos = "idHeroe="+idHeroe+"&transaccion=eliminar";
+		ejecutarAjax(datos);
+	}
+}
+
 function alCargarDocumento()
 {
 	btnInsertar.addEventListener("click",altaHeroe);
+
+	for(var i = 0; i < btnsEliminar.length; i++)
+	{
+		btnsEliminar[i].addEventListener("click", eliminarHeroe);
+	}
 }
 
 //Eventos

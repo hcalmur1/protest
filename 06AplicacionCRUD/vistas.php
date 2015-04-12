@@ -137,8 +137,8 @@ function mostrarHeroes()
 					$tabla .= "<td><p>".$fila['descripcion']."</p></td>";
 					$tabla .= "<td><h3>".$editorial[$fila['editorial']]."</h3></td>";
 					$tabla .= "<td>Botón editar</td>";
-					$tabla .= "<td>Botón eliminar</td>";
-				$tabla .= "<tr>";
+					$tabla .= "<td><a href='#' class='eliminar' data-id='".$fila['id_heroe']."'>Eliminar</a></td>";
+				$tabla .= "</tr>";
 			}
 			//Libero memoria
 			$resultado->free();
