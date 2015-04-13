@@ -72,7 +72,6 @@ function catalogoEditoriales()
 		Lo recomendable es obtener los datos pasarlos a un arreglo cerrar la conexión y despues igualar los datos para traer el nombre
 	*/
 	$editoriales = Array();
-
 	$mysql = conexionMySQL();
 	$sql = "SELECT * FROM editorial";
 
