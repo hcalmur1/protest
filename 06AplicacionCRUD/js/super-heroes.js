@@ -45,11 +45,19 @@ function enviarDatos()
 			precarga.style.display = "none";
 			respuesta.style.display = "block";
 			respuesta.innerHTML = ajax.responseText;
+
 			/*indexOf se usa para buscar texto dentro de una cadena de texto, cuando no encuientra el dato el valor es igual a -1*/
 			if(ajax.responseText.indexOf("data-insertar")>-1)
 			{
-				document.querySelector("#alta-heroe").addEventListener("submit",insertarHeroe);
+				document.querySelector("#alta-heroe").addEventListener("submit",insertarActualizarHeroe);
 			}
+
+			/*indexOf se usa para buscar texto dentro de una cadena de texto, cuando no encuientra el dato el valor es igual a -1*/
+			if(ajax.responseText.indexOf("data-editar")>-1)
+			{
+				document.querySelector("#editar-heroe").addEventListener("submit",insertarActualizarHeroe);
+			}
+
 			//Esta decisión se va a utilizar, para que recarge los datos después de 2 segundo.
 			if(ajax.responseText.indexOf("data-recargar")>-1)
 			{
@@ -87,7 +95,8 @@ function ejecutarAjax(datos)
 	ajax.send(datos);
 }
 
-function insertarHeroe(evento)
+//function insertarHeroe(evento)
+function insertarActualizarHeroe(evento)
 {
 	evento.preventDefault();
 	/*

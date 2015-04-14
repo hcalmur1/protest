@@ -4,6 +4,39 @@ require_once "conexion.php";
 function listaEditorialesEditada($id)
 {
 	//Esta función devuelve el nombre de la editorial del super héroe a editar
+	$mysql = conexionMySQL();
+	$sql = "SELECT * FROM editorial";
+
+	$resultado = $mysql->query($sql);
+
+	$lista = "<select id='editorial' name='editorial_slc' required>";
+		$lista .= "<option value=''>--------</option>";
+		while($fila = $resultado->fetch_assoc())
+		{
+
+				//Dos Formas de hacer el selected
+				$selected = ($id == $fila["id_editorial"])?"selected":"";
+
+				$lista .= sprintf(
+					"<option value='%d' $selected>%s</option>",
+					$fila["id_editorial"],
+					$fila["editorial"]
+				);
+			/*
+			 $lista .= sprintf("<option value='%d'",$fila["id_editorial"]);
+				if($id==$fila["id_editorial"])
+				{
+					$lista .= sprintf(" selected");
+				}
+				$lista .= sprintf(">%s</option>",$fila["editorial"]);
+			 */
+		}
+	$lista .= "</select>";
+
+	$resultado->free();
+	$mysql->close();
+
+	return $lista;
 }
 
 function editarHeroe($idHeroe)
@@ -38,7 +71,6 @@ function editarHeroe($idHeroe)
 					$form .= "<input type='submit' id='actualizar' name='actualizar_btn' value='Actualizar' />";
 					$form .= "<input type='hidden' id='transaccion' name='transaccion' value='actualizar' />";
 					$form .= "<input type='hidden' id='idHeroe' name='idHeroe' value='".$fila["id_heroe"]."' />";
-
 				$form .= "</div>";
 			$form .= "</fieldset>";
 		$form .= "</form>";
