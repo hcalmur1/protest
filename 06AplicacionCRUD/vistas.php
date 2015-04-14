@@ -1,6 +1,59 @@
 <?php
 require_once "conexion.php";
 
+function listaEditorialesEditada($id)
+{
+	//Esta función devuelve el nombre de la editorial del super héroe a editar
+}
+
+function editarHeroe($idHeroe)
+{
+	$mysql = conexionMySQL();
+	$sql = "SELECT * FROM heroes WHERE id_heroe=$idHeroe";
+
+	if($resultado = $mysql->query($sql))
+	{
+		$fila = $resultado->fetch_assoc();
+		//Muestra el form con los datos del registro
+		$form = "<form id='editar-heroe' class='formulario' data-editar>";
+			$form .= "<fieldset>";
+				$form .= "<legend>Edición de Super Héroe: </legend>";
+				$form .= "<div>";
+					$form .= "<label for='nombre'>Nombre:</label>";
+					$form .= "<input type='text' id='nombre' name='nombre_txt' value='".$fila["nombre"]."' required />";
+				$form .= "</div>";
+				$form .= "<div>";
+					$form .= "<label for='imagen'>Imagen:</label>";
+					$form .= "<input type='text' id='imagen' name='imagen_txt' value='".$fila["imagen"]."' required />";
+				$form .= "</div>";
+				$form .= "<div>";
+					$form .= "<label for='descripcion'>Descripcion:</label>";
+					$form .= "<textarea id='descripcion' name='descripcion_txa' required>".$fila["descripcion"]."</textarea>";
+				$form .= "</div>";
+				$form .= "<div>";
+					$form .= "<label for='editorial'>Editorial:</label>";
+					$form .= listaEditorialesEditada($fila["editorial"]);
+				$form .= "</div>";
+				$form .= "<div>";
+					$form .= "<input type='submit' id='actualizar' name='actualizar_btn' value='Actualizar' />";
+					$form .= "<input type='hidden' id='transaccion' name='transaccion' value='actualizar' />";
+					$form .= "<input type='hidden' id='idHeroe' name='idHeroe' value='".$fila["id_heroe"]."' />";
+
+				$form .= "</div>";
+			$form .= "</fieldset>";
+		$form .= "</form>";
+
+		$resultado->free();
+	}
+	else
+	{
+		//Muestra un mensaje de Error
+		$form = "<div class='error'>Error: No se ejecuto la consulta a la Base de Datos</div>";
+	}
+	$mysql->close();
+	return printf($form);
+}
+
 function listaEditorial()
 {
 	//Esta función generará el select de las editoriales
@@ -135,7 +188,7 @@ function mostrarHeroes()
 					$tabla .= "<td><img src='img/".$fila['imagen']."' /></td>";
 					$tabla .= "<td><p>".$fila['descripcion']."</p></td>";
 					$tabla .= "<td><h3>".$editorial[$fila['editorial']]."</h3></td>";
-					$tabla .= "<td>Botón editar</td>";
+					$tabla .= "<td><a href='#' class='editar' data-id='".$fila['id_heroe']."'>Editar</a></td>";
 					$tabla .= "<td><a href='#' class='eliminar' data-id='".$fila['id_heroe']."'>Eliminar</a></td>";
 				$tabla .= "</tr>";
 			}

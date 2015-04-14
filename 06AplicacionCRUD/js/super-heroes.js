@@ -3,11 +3,12 @@ var READY_STATE_CHANGE = 4,
 	OK = 200;
 
 //Variables y Objetos
-var ajax = null;
-var	btnInsertar = document.querySelector("#insertar");
-var btnsEliminar = document.querySelectorAll(".eliminar");
-var	precarga = document.querySelector("#precarga");
-var	respuesta = document.querySelector("#respuesta");
+var ajax = null,
+	btnInsertar = document.querySelector("#insertar"),
+	btnsEditar = document.querySelectorAll(".editar"),
+	btnsEliminar = document.querySelectorAll(".eliminar"),
+	precarga = document.querySelector("#precarga"),
+	respuesta = document.querySelector("#respuesta");
 
 //Funciones
 /*
@@ -133,12 +134,22 @@ function eliminarHeroe(evento)
 	 */
 	var idHeroe = evento.target.dataset.id;
 	var eliminar = confirm("¿Estás seguro de eliminar el Super Héroe con el id: "+idHeroe);
-	
+
 	if(eliminar)
 	{
 		var datos = "idHeroe="+idHeroe+"&transaccion=eliminar";
 		ejecutarAjax(datos);
 	}
+}
+
+function editarHeroe(evento)
+{
+	evento.preventDefault();
+	//alert(evento.target.dataset.id);
+	var idHeroe = evento.target.dataset.id,
+		datos = "idHeroe="+idHeroe+"&transaccion=editar";
+		console.log(datos);
+	ejecutarAjax(datos);
 }
 
 function alCargarDocumento()
@@ -148,6 +159,11 @@ function alCargarDocumento()
 	for(var i = 0; i < btnsEliminar.length; i++)
 	{
 		btnsEliminar[i].addEventListener("click", eliminarHeroe);
+	}
+
+	for(var i = 0; i< btnsEditar.length; i++)
+	{
+		btnsEditar[i].addEventListener("click", editarHeroe);
 	}
 }
 
