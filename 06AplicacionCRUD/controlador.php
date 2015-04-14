@@ -34,6 +34,7 @@ function ejecutarTransaccion($transaccion)
 	else if($transaccion == "editar")
 	{
 		//Traer los datos del registro a modificar en un formulario
+		editarHeroe($_POST["idHeroe"]);
 	}
 	else if($transaccion == "actualizar")
 	{
