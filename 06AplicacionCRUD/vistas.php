@@ -185,20 +185,54 @@ function catalogoEditoriales()
 function mostrarHeroes()
 {
 	$editorial = catalogoEditoriales();
-
 	$mysql = conexionMySQL();
 	$sql = "SELECT * FROM heroes ORDER BY id_heroe DESC";
 
 	if($resultado = $mysql->query($sql))
 	{
 		//Compruebo que el query me regrese registros
-		if(mysqli_num_rows($resultado) == 0)
+		$totalRegistros = mysqli_num_rows($resultado);
+		if($totalRegistros == 0)
 		{
 			$respuesta = "<div class='error'>No existen registro de super héroes. La Base de Datos esta vacía</div>";
 		}
 		else
 		{
-			//echo "Wiiii";
+			/*
+				Inicia paginación
+				Tarea: Encapsular
+			 */
+				//Limitar mi consulta SQL
+				$regXPag = 3;
+				$pagina = false;
+
+				//Examinar la página a mostrar y el inicio del registro a mostrar
+				if(isset($_GET["p"]))
+				{
+					$pagina = $_GET["p"];
+				}
+
+				if(!$pagina)
+				{
+					$inicio = 0;
+					$pagina = 1;
+				}
+				else
+				{
+					$inicio = ($pagina - 1) * $regXPag;
+				}
+
+				//Calculó el total de páginas
+				$totalPaginas = ceil($totalRegistros/$regXPag);
+
+				$sql .= " LIMIT ".$inicio.",".$regXPag;
+				//SELECT * FROM heroes ORDER BY id_heroe DESC LIMIT 0,3
+				//echo $sql."<br />".$totalPaginas;
+				$resultado = $mysql->query($sql);
+
+			/*
+				Termina paginación
+			 */
 			$tabla = "<table id='tabla-heroes' class='tabla'>";
 			$tabla .= "<thead>";
 				$tabla .= "<tr>";
