@@ -74,6 +74,28 @@ img
 	font-weight: bold;
 }
 
+.paginacion a, .actual
+{
+	color: #EC673A;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 0 .5em;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.paginacion a:hover, .actual
+{
+	color: #1C5F81;
+}
+
+.actual
+{
+	font-size: 3rem;
+}
+
+
+
 .tabla
 {
 	margin: auto;

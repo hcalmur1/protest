@@ -221,7 +221,6 @@ function mostrarHeroes()
 				{
 					$inicio = ($pagina - 1) * $regXPag;
 				}
-
 				//Calculó el total de páginas
 				$totalPaginas = ceil($totalRegistros/$regXPag);
 
@@ -230,6 +229,31 @@ function mostrarHeroes()
 				//echo $sql."<br />".$totalPaginas;
 				$resultado = $mysql->query($sql);
 
+				//Despliega de la paginación
+				$paginacion .= "<div class='paginacion'>";
+					$paginacion .= "<p>";
+						$paginacion .= "Número de resultados: <b>$totalRegistros</b> ";
+						$paginacion .= " Mostrando <b>$regXPag</b> resultados por página. ";
+						$paginacion .= " Página <b>$pagina</b> de <b>$totalPaginas</b>";
+					$paginacion .= "</p>";
+
+					if( $totalPaginas > 1 )
+					{
+						$paginacion .= "<p>";
+							$paginacion .= ($pagina!=1)?"<a href='?p=".($pagina-1)."'>&laquo</a>":"";
+
+							for($i=1;$i<=$totalPaginas;$i++)
+							{
+								//Si muestro el índice de la página actual, no coloco enlace
+								$actual = "<span class='actual'>$pagina</span>";
+								//Si el índice no corresponde con la página mostrada actualmente, coloco el enlace para ir a esta página.
+								$enlace = "<a href='?p=$i'>$i</a>";
+								$paginacion .= ($pagina == $i)?$actual:$enlace;
+							}
+							$paginacion .= ($pagina!=$totalPaginas)?"<a href='?p=".($pagina+1)."'>&raquo</a>":"";
+						$paginacion .= "</p>";
+					}
+				$paginacion .= "</div>";
 			/*
 				Termina paginación
 			 */
@@ -262,7 +286,8 @@ function mostrarHeroes()
 			$resultado->free();
 			$tabla .= "</tbody>";
 			$tabla .= "</table>";
-			$respuesta = $tabla;
+
+			$respuesta = $tabla.$paginacion;
 		}
 	}
 	else
