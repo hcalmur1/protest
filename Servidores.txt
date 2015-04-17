@@ -1,0 +1,33 @@
+Servidores
+    * Compartidos (Hosting)
+        (LAMP - Todo se administra a tráves de Cpanel-FTP-Más Báratos- Entornos Freelance)
+        http://es.wikipedia.org/wiki/Alojamiento_compartido
+    * Dedicados
+        (Renta de un servidor físico - Muy caro - Pago Mensual - Entornos empresariales)
+        http://es.wikipedia.org/wiki/Servidor_virtual_privado
+    * Virtuales (VPS)
+        (Servidor Dedicado Virtual +-Precio - Línea de terminal de comandos - SSH para conectarte - Pago Mensual- Entornos Freelance)
+        http://es.wikipedia.org/wiki/Servidor_virtual_privado
+    * en la Nube (Cloud)
+        (Plataforma de servicios - Pago Mensual - Entornos empresariales)
+        http://es.wikipedia.org/wiki/Computación_en_la_nube
+        empresa: rackspace, amazon, windows azure
+Dominios
+    * Es el nombre de mi página por ejemplo (bextaln.com)
+     http://es.wikipedia.org/wiki/Dominio_de_Internet
+Hospedajes
+    * Contratar con una empresa de hosting el servicio de que mi sitio o app este 24/7 disponible en internet
+     http://es.wikipedia.org/wiki/Alojamiento_web
+Ejemplos:
+    * Servidores compartidos
+        http://www.justhost.com/ hosting compartidos y hosting virtuales
+        http://neubox.com/ empresa mexicana hosting compartidos
+     * Servidores en la nube
+        https://www.digitalocean.com/
+        https://www.heroku.com/
+Registro de dominios
+        http://www.nic.mx/
+        https://www.akky.mx/
+Para verificar a nombre de quien esta el nombre del dominio
+        http://www.who.is/
+

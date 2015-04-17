@@ -35,7 +35,7 @@
 			"file": "06AplicacionCRUD/css/super-heroes.css",
 			"settings":
 			{
-				"buffer_size": 1360,
+				"buffer_size": 1362,
 				"line_ending": "Windows"
 			}
 		},
@@ -43,15 +43,17 @@
 			"file": "06AplicacionCRUD/vistas.php",
 			"settings":
 			{
-				"buffer_size": 9106,
+				"buffer_size": 9180,
 				"line_ending": "Windows"
 			}
 		},
 		{
+			"file": "/H/Música/Lista Glam.txt",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
+				"buffer_size": 7227,
+				"line_ending": "Windows",
+				"name": "Slaughter - Fly To The Angels"
 			}
 		}
 	],
@@ -179,7 +181,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -188,35 +190,9 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1360,
+						"buffer_size": 1362,
 						"regions":
 						{
-							"gutter_color_1004":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1237,
-										1253
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1005":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1054,
-										1070
-									]
-								],
-								"scope": "gutter_color"
-							},
 							"gutter_color_1009":
 							{
 								"flags": 144,
@@ -224,21 +200,8 @@
 								"regions":
 								[
 									[
-										1091,
-										1107
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1045":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1054,
-										1070
+										1093,
+										1109
 									]
 								],
 								"scope": "gutter_color"
@@ -250,21 +213,21 @@
 								"regions":
 								[
 									[
-										1284,
-										1305
+										1286,
+										1307
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_1054":
+							"gutter_color_1056":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#EEEEEE.png",
 								"regions":
 								[
 									[
-										1054,
-										1070
+										1056,
+										1072
 									]
 								],
 								"scope": "gutter_color"
@@ -276,21 +239,21 @@
 								"regions":
 								[
 									[
-										1091,
-										1107
+										1093,
+										1109
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_1091":
+							"gutter_color_1093":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#292623.png",
 								"regions":
 								[
 									[
-										1091,
-										1107
+										1093,
+										1109
 									]
 								],
 								"scope": "gutter_color"
@@ -302,8 +265,8 @@
 								"regions":
 								[
 									[
-										1337,
-										1358
+										1339,
+										1360
 									]
 								],
 								"scope": "gutter_color"
@@ -315,8 +278,8 @@
 								"regions":
 								[
 									[
-										1337,
-										1358
+										1339,
+										1360
 									]
 								],
 								"scope": "gutter_color"
@@ -328,8 +291,8 @@
 								"regions":
 								[
 									[
-										1215,
-										1236
+										1217,
+										1238
 									]
 								],
 								"scope": "gutter_color"
@@ -341,8 +304,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1253
+										1239,
+										1255
 									]
 								],
 								"scope": "gutter_color"
@@ -354,8 +317,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1253
+										1239,
+										1255
 									]
 								],
 								"scope": "gutter_color"
@@ -367,8 +330,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1253
+										1239,
+										1255
 									]
 								],
 								"scope": "gutter_color"
@@ -380,21 +343,21 @@
 								"regions":
 								[
 									[
-										1215,
-										1236
+										1217,
+										1238
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_1215":
+							"gutter_color_1217":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#292623.png",
 								"regions":
 								[
 									[
-										1215,
-										1236
+										1217,
+										1238
 									]
 								],
 								"scope": "gutter_color"
@@ -406,8 +369,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1253
+										1239,
+										1255
 									]
 								],
 								"scope": "gutter_color"
@@ -419,8 +382,8 @@
 								"regions":
 								[
 									[
-										1284,
-										1305
+										1286,
+										1307
 									]
 								],
 								"scope": "gutter_color"
@@ -432,8 +395,21 @@
 								"regions":
 								[
 									[
-										1237,
-										1253
+										1239,
+										1255
+									]
+								],
+								"scope": "gutter_color"
+							},
+							"gutter_color_1239":
+							{
+								"flags": 144,
+								"icon": "Cache/GutterColor/#EEEEEE.png",
+								"regions":
+								[
+									[
+										1239,
+										1255
 									]
 								],
 								"scope": "gutter_color"
@@ -445,21 +421,21 @@
 								"regions":
 								[
 									[
-										1284,
-										1305
+										1286,
+										1307
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_1284":
+							"gutter_color_1286":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#EC673A.png",
 								"regions":
 								[
 									[
-										1284,
-										1305
+										1286,
+										1307
 									]
 								],
 								"scope": "gutter_color"
@@ -471,8 +447,8 @@
 								"regions":
 								[
 									[
-										1337,
-										1358
+										1339,
+										1360
 									]
 								],
 								"scope": "gutter_color"
@@ -484,21 +460,21 @@
 								"regions":
 								[
 									[
-										1337,
-										1358
+										1339,
+										1360
 									]
 								],
 								"scope": "gutter_color"
 							},
-							"gutter_color_1337":
+							"gutter_color_1339":
 							{
 								"flags": 144,
 								"icon": "Cache/GutterColor/#1C5F81.png",
 								"regions":
 								[
 									[
-										1337,
-										1358
+										1339,
+										1360
 									]
 								],
 								"scope": "gutter_color"
@@ -627,8 +603,8 @@
 								"regions":
 								[
 									[
-										1054,
-										1070
+										1056,
+										1072
 									]
 								],
 								"scope": "gutter_color"
@@ -640,8 +616,8 @@
 								"regions":
 								[
 									[
-										1054,
-										1070
+										1056,
+										1072
 									]
 								],
 								"scope": "gutter_color"
@@ -653,8 +629,8 @@
 								"regions":
 								[
 									[
-										1091,
-										1107
+										1093,
+										1109
 									]
 								],
 								"scope": "gutter_color"
@@ -666,8 +642,8 @@
 								"regions":
 								[
 									[
-										1091,
-										1107
+										1093,
+										1109
 									]
 								],
 								"scope": "gutter_color"
@@ -705,8 +681,8 @@
 								"regions":
 								[
 									[
-										1215,
-										1236
+										1217,
+										1238
 									]
 								],
 								"scope": "gutter_color"
@@ -715,8 +691,8 @@
 						"selection":
 						[
 							[
-								729,
-								729
+								707,
+								707
 							]
 						],
 						"settings":
@@ -724,11 +700,21 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -739,41 +725,31 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -785,10 +761,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1386.0,
+						"translation.y": 1280.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -797,15 +773,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9106,
+						"buffer_size": 9180,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6931,
-								6931
+								7204,
+								7204
 							]
 						],
 						"settings":
@@ -813,11 +789,21 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -828,41 +814,31 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -875,7 +851,7 @@
 							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 308.0,
+						"translation.y": 4840.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -883,40 +859,32 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/H/Música/Lista Glam.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 7227,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								7175,
+								7175
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_name": "Slaughter - Fly To The Angels",
 							"bh_regions":
 							[
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -927,44 +895,55 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
+							"side_bar_folders_auto_load_folder": 1,
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4803.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
